@@ -1,0 +1,430 @@
+@charset "UTF-8";
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ● FAQ
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* ----------------------------
+  全体共通(TOP0)
+---------------------------- */
+html {
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  color: #000;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  background: none;
+}
+a:hover {
+  opacity: 0.6;
+}
+* {
+  box-sizing:border-box;
+}
+
+/* ----------------------------
+  ヘッダー用
+---------------------------- */
+.l-header__block {
+  display: flex;
+  justify-content: center;
+}
+.l-header__inner {
+  width: 100%;
+  max-width: 75rem;
+  height: 3.9375rem;
+  padding: 0.375rem 0.9375rem 0rem 0.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.l-header__logo__image img{
+  width: 12.375rem;
+}
+.l-header__nav {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 3.9375rem;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+  padding: 0 0.9375rem;
+}
+.l-header__nav2 {
+  display: none;
+}
+.l-header__nav ul {
+  width: calc(100vw - 1.875rem);
+  height: 13.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #168352;
+  border-radius: 1.5rem;
+}
+.l-header__nav li {
+  text-align: center;
+  padding: 0.9375rem 0;
+}
+.l-header__nav ul a {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #fff;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+}
+.l-header__block .c-nav__active {
+  transform: translateX(0%);
+}
+.l-header__burger {
+  width: 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.l-header__burger-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.l-header__burger--line {
+  position: absolute;
+  top: 28%;
+  left: -5%;
+}
+.l-header__burger--line div {
+  width: 1.5rem;
+  height: 0.1rem;
+  background: #000;
+  margin: 0 0 0.4375rem 0;
+}
+@media screen and (min-width:768px) {
+  .l-header__inner {
+    height: 7.125rem;
+  }
+  .l-header__logo__image img{
+    width: 16.5625rem;
+  }
+  .l-header__burger {
+    display: none;
+  }
+  .l-header__nav {
+    display: none;
+  }
+  .l-header__nav2 {
+    display: block;
+  }
+  .l-header__nav2 ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0.5rem 0;
+  }
+  .l-header__nav2 li:nth-child(1) {
+    padding: 0 1.25rem 0 0;
+  }
+  .l-header__nav2 li:nth-child(2) {
+    padding: 0 0 0 1.25rem;
+  }
+  .l-header__nav2 a {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    font-size: 1rem;
+  } 
+}
+
+/* ----------------------------
+  メイン１用
+---------------------------- */
+.l-main1__block {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 0.9375rem 0 0.9375rem;
+}
+.l-main1__inner {
+  width: 100%;
+  max-width: 75rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.l-main1__main-image {
+  display: flex;
+  justify-content: center;
+}
+.l-main1__main-title {
+  width: 15.625rem;
+  border-top-right-radius: 1.5625rem;
+  text-align: left;
+  background-color: #fff;
+  padding: 0.9375rem 0;
+}
+.l-main1__main-title h3 {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+  font-size: 1.875rem;
+}
+.l-main1__nav {
+  text-align: right;
+  padding: 0.5rem 0;
+}
+.l-main1__nav p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #000;
+  font-size: 0.75rem;
+}
+@media screen and (min-width:768px) {
+  .l-main1__block {
+    padding: 2.5rem 0 0 0;
+  }
+  .l-main1__main-title {
+    width: 20.5rem;
+    border-top-right-radius: 2.8rem;
+    text-align: center;
+    padding: 1.8rem 0 2.1rem 0;
+    margin-top: -7.5rem;
+  }
+  .l-main1__main-title h3 {
+    font-size: 2.25rem;
+  }
+  .l-main1__nav {
+    text-align: right;
+    padding: 1rem 0;
+  }
+}
+
+/* ----------------------------
+  メイン２用
+---------------------------- */
+.l-main2__aco-container {
+  margin: 1.875rem 0.9375rem;
+}
+.l-main2__aco-list {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.25rem 1rem 1.25rem;
+
+  border: #ccc 0.0625rem solid;
+  border-radius: 0.9375rem;
+}
+.l-main2__aco-title {
+  padding: 0.1rem 2.1875rem 0 0;
+  position: relative;
+}
+
+.l-main2__aco-question {
+  position: relative;
+  margin-left: 1.5625rem;
+  padding: 0 0 0 1.25rem;
+}
+.l-main2__aco-question:before {
+  position: absolute;
+  content: 'Q.';
+  top: -0.25rem;
+  left: -1.375rem;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #168352;
+  font-size: 1.5625rem;
+}
+.l-main2__aco-qmark p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #168352;
+  font-size: 2rem;
+}
+.l-main2__aco-title--label1,
+.l-main2__aco-title--label2 {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #168352;
+  font-size: 0.6875rem;
+  border: #168352 0.0625rem solid;
+  border-radius: 0.3125rem;
+  margin-right: 0.1875rem;
+}
+.l-main2__aco-title--label1 {
+  padding: 0.125rem 0.6875rem 0.25rem 0.625rem;
+}
+.l-main2__aco-title--label2 {
+  padding: 0.125rem 0.9375rem 0.25rem 0.9375rem;
+}
+.l-main2__aco-title p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.l-main2__aco-title:before {
+  position: absolute;
+  content: '';
+  top: 18%;
+  right: 0.3125rem;
+  height: 0.1875rem;
+  width: 1.25rem;
+  background: #333;
+  transform: rotate(90deg);
+  transition: all .3s ease-in-out;
+}
+.l-main2__aco-title:after {
+  position: absolute;
+  content: '';
+  top: 18%;
+  right: 0.3125rem;
+  height: 0.1875rem;
+  width: 1.25rem;
+  background: #333;
+  transition: all .3s ease-in-out;
+}
+.l-main2__aco-title.open:before {
+  transform: rotate(180deg);
+}
+.l-main2__aco-title.open:after {
+  opacity: 0;
+}
+.l-main2__aco-text {
+  display: none;
+  padding: 0.1875rem 0 0 0.3125rem;
+}
+.l-main2__aco-text p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+@media screen and (max-width:389px) {
+  .l-main2__aco-title--label1,
+  .l-main2__aco-title--label2 {
+    display: block;
+  }
+}
+@media screen and (min-width:768px) {
+  .l-main2__block {
+    display: flex;
+    justify-content: center;
+  }
+  .l-main2__inner {
+    width: 51.875rem;
+    max-width: 100%;
+  }
+  .l-main2__aco-container {
+    margin: 3rem 0.9375rem 1.875rem 0.9375rem;
+  }
+  .l-main2__aco-list {
+    margin-top: 1.5rem;
+    padding: 1.375rem 1.25rem 1.0625rem 1.5625rem;
+  }
+  .l-main2__aco-question {
+    margin-left: 0;
+    padding: 0;
+  }
+  .l-main2__aco-question:before {
+    top: -0.25rem;
+    left: -2.5rem;
+  }
+  .l-main2__aco-title {
+    padding: 0.0625rem 2.0625rem 0 3rem;
+  }
+  .l-main2__aco-title p {
+    font-size: 1.125rem;
+    padding: 0.625rem 0;
+  }
+  .l-main2__aco-title:before {
+    right: 0.625rem;
+  }
+  .l-main2__aco-title:after {
+    right: 0.625rem;
+  }
+  .l-main2__aco-text {
+    padding: 0.375rem 0 0 0.3125rem;
+  }
+}
+
+/* ----------------------------
+  フッター用
+---------------------------- */
+.l-footer {
+  margin-top: 10.625rem;
+}
+.l-footer__inner {
+  height: 3.875rem;
+  background-color: #168352;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.l-footer__list {
+  width: 75rem;
+  max-width: 100%;
+  padding-top: 0.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.l-footer__list li:nth-child(2) {
+  padding: 0 0.9375rem;
+}
+.l-footer__list-price,
+.l-footer__list-faq,
+.l-footer__list p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  padding: 0.625rem 0;
+  font-size: 0.8125rem;
+}
+@media screen and (min-width:768px) {
+  .l-footer {
+    margin-top: 2.625rem;
+  }
+  .l-footer__inner {
+    height: 5.64rem;
+    padding-bottom: 0.625rem;
+  }
+  .l-footer__list {
+    align-items: baseline;
+    padding-top: 0.625rem;
+  }
+  .l-footer__list li:nth-child(2) {
+    padding: 0 1.125rem 0 1.25rem;
+  }
+  .l-footer__list-price {
+    font-size: 0.9375rem;
+  }
+  .l-footer__list-faq {
+    font-size: 0.875rem;
+  }
+  .l-footer__list p {
+    font-weight: 300;
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,545 @@
+@charset "UTF-8";
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ● PRICE
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* ----------------------------
+  全体共通(TOP0)
+---------------------------- */
+html {
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  color: #000;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  background: none;
+}
+a:hover {
+  opacity: 0.6;
+}
+* {
+  box-sizing:border-box;
+}
+
+/* ----------------------------
+  共通オブジェクト
+---------------------------- */
+.l-main2__title {
+  border-bottom: #ddd 0.1875rem solid;
+  position:relative;
+}
+.l-main2__title h4::after{
+  content:"";
+  display:block;
+  width: 3.125rem;
+  height: 0.1875rem;
+  background-color:#168352;
+  position:absolute;
+  bottom: -0.1875rem;
+}
+.l-main2__title h4 {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #000;
+  font-size: 1.375rem;
+  padding: 0.0625rem 0 0.625rem 0;
+}
+.c-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.375rem 0 0.625rem 0;
+}
+.c-card__discription p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+.c-card__discription--space p {
+  letter-spacing: -0.001em;
+}
+@media screen and (min-width:768px) {
+  .l-main2__title {
+    border-bottom: #ddd 0.3125rem solid;
+  }
+  .l-main2__title h4::after{
+    width: 6.25rem;
+    height: 0.3125rem;
+    bottom: -0.3125rem;
+  }
+  .l-main2__title h4 {
+    font-weight: 700;
+    font-size: 1.75rem;
+    padding: 1.25rem 0 1.125rem 0;
+  }
+  .c-card {
+    justify-content: flex-start;
+    width: 15.4375rem;
+    padding: 2rem 0 0.3125rem 0;
+  }
+  .c-card__image {
+    height: 9.25rem;
+    margin-bottom: 0.625rem;
+  }
+  .c-card__image img{
+    height: 100%;
+  }
+  .c-card__discription p {
+    line-height: 1.7;
+  }
+}
+
+/* ----------------------------
+  ヘッダー用
+---------------------------- */
+.l-header__block {
+  display: flex;
+  justify-content: center;
+}
+.l-header__inner {
+  width: 100%;
+  max-width: 75rem;
+  height: 3.9375rem;
+  padding: 0.375rem 0.9375rem 0rem 0.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.l-header__logo__image img{
+  width: 12.375rem;
+}
+.l-header__nav {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 3.9375rem;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+  padding: 0 0.9375rem;
+}
+.l-header__nav2 {
+  display: none;
+}
+.l-header__nav ul {
+  width: calc(100vw - 1.875rem);
+  height: 13.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #168352;
+  border-radius: 1.5rem;
+}
+.l-header__nav li {
+  text-align: center;
+  padding: 0.9375rem 0;
+}
+.l-header__nav ul a {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #fff;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+}
+.l-header__block .c-nav__active {
+  transform: translateX(0%);
+}
+.l-header__burger {
+  width: 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.l-header__burger-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.l-header__burger--line {
+  position: absolute;
+  top: 28%;
+  left: -5%;
+}
+.l-header__burger--line div {
+  width: 1.5rem;
+  height: 0.1rem;
+  background: #000;
+  margin: 0 0 0.4375rem 0;
+}
+@media screen and (min-width:768px) {
+  .l-header__inner {
+    height: 7.125rem;
+  }
+  .l-header__logo__image img{
+    width: 16.5625rem;
+  }
+  .l-header__burger {
+    display: none;
+  }
+  .l-header__nav {
+    display: none;
+  }
+  .l-header__nav2 {
+    display: block;
+  }
+  .l-header__nav2 ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0.5rem 0;
+  }
+  .l-header__nav2 li:nth-child(1) {
+    padding: 0 1.25rem 0 0;
+  }
+  .l-header__nav2 li:nth-child(2) {
+    padding: 0 0 0 1.25rem;
+  }
+  .l-header__nav2 a {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    font-size: 1rem;
+  } 
+}
+
+/* ----------------------------
+  メイン１用
+---------------------------- */
+.l-main1__block {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 0.9375rem 0 0.9375rem;
+}
+.l-main1__inner {
+  width: 100%;
+  max-width: 75rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.l-main1__main-image {
+  display: flex;
+  justify-content: center;
+}
+.l-main1__main-title {
+  width: 15.625rem;
+  border-top-right-radius: 1.5625rem;
+  text-align: left;
+  background-color: #fff;
+  padding: 0.9375rem 0;
+}
+.l-main1__main-title h3 {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+  font-size: 1.875rem;
+}
+.l-main1__nav {
+  text-align: right;
+  padding: 0.5rem 0;
+}
+.l-main1__nav p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #000;
+  font-size: 0.75rem;
+}
+@media screen and (min-width:768px) {
+  .l-main1__block {
+    padding: 2.5rem 0 0 0;
+  }
+  .l-main1__main-title {
+    width: 20.5rem;
+    border-top-right-radius: 2.1875rem;
+    text-align: center;
+    padding: 1.875rem 0 2.1875rem 0;
+    margin-top: -7.5rem;
+  }
+  .l-main1__main-title h3 {
+    font-size: 2.25rem;
+  }
+  .l-main1__nav {
+    text-align: right;
+    padding: 1rem 0;
+  }
+}
+
+/* ----------------------------
+  メイン２用
+---------------------------- */
+.l-main2__block {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 0.9375rem 3.875rem 0.9375rem;
+}
+.l-main2__inner {
+  width: 100%;
+  max-width: 50rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.l-main2__slick-inner {
+  padding: 1.375rem 0;
+}
+.l-main2__slick img{
+  width: 100%;
+}
+.slick-dots li {
+  width: 0.25rem;
+  bottom: 1.7rem;
+  left: -0.5rem;
+}
+.slick-dots li button:before {
+  color: #fff;
+  opacity: .8;
+  font-size: 0.5625rem;
+}
+.slick-dots li.slick-active button:before{
+  color: #168352;
+  font-size: 0.5625rem;
+}
+.l-main2__feature {
+  margin-bottom: 2.375rem;
+}
+.l-main2__image {
+  display: flex;
+  justify-content: center;
+}
+.l-main2__i-inner {
+  width: 31.25rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.l-main2__price {
+  margin-bottom: 2.0625rem;
+}
+.l-main2__yen {
+  padding: 1.0625rem 0 1.25rem 0;
+}
+.l-main2__yen span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+  font-size: 2rem;
+}
+.l-main2__yen p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #000;
+  font-size: 1rem;
+}
+.l-main2__subtitle {
+  border-left: #168352 0.125rem solid;
+  padding-left: 1.0625rem;
+  margin: 1.375rem 0 1.25rem 0;
+}
+.l-main2__subtitle h5 {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+  font-size: 1.25rem;
+}
+.l-main2__table {
+  width: 100%;
+  border-collapse: collapse;
+  border: #ddd 0.0625rem solid;
+}
+.l-main2__table th,
+.l-main2__table td {
+  display: block;
+  text-align: left;
+  padding: 0.375rem 0 0.5rem 1.25rem;
+  border-bottom: #ddd 0.0625rem solid;
+}
+.l-main2__table th {
+  background-color: #eee;
+}
+.l-main2__table th {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #000;
+  font-size: 1rem;
+}
+.l-main2__table td {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+  font-size: 1rem;
+}
+
+@media screen and (min-width:768px) {
+  .l-main2__block {
+    padding: 1.25rem 0.9375rem 4.375rem 0.9375rem;
+  }
+  .l-main2__i-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .l-main2__gallery {
+    height: 41.125rem;
+  }
+  .l-main2__slick-inner {
+    padding: 1.9375rem 0 1.875rem 0;
+  }
+  .slick-dots li {
+    bottom: 2.5rem;
+  }
+  .l-main2__feature {
+    margin-bottom: 2.125rem;
+  }
+  .l-main2__i-inner {
+    width: 100%;
+  }
+  .l-main2__yen {
+    padding: 1.5625rem 0 1.25rem 0;
+  }
+  .l-main2__price {
+    margin-bottom: 1.4375rem;
+  }
+  .l-main2__table-inner {
+    padding: 0 1.875rem;
+  }
+  .l-main2__subtitle {
+    border-left: #168352 0.1875rem solid;
+    margin: 1.9375rem 0 1.5625rem 0;
+    padding: 0.0625rem 0 0.25rem 1.0625rem;
+  }
+  .l-main2__subtitle h5 {
+    font-size: 1.5rem;
+  }
+  .l-main2__table th,
+  .l-main2__table td {
+    display: table-cell;
+  }
+  .l-main2__table th {
+    border-right: #ddd 0.0625rem solid;
+    padding: 1.1875rem 0 1.1875rem 1.125rem;
+  }
+  .l-main2__table td {
+    padding: 1.1875rem 0 1.1875rem 1.375rem;
+  }
+  .l-main2__table th {
+    width: 12.5rem;
+  }
+}
+
+/* ----------------------------
+  メイン３用
+---------------------------- */
+.l-main3__background {
+  height: 22.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../image/price/contact_sp.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.l-main3__button {
+  display: flex;
+  justify-content: center;
+}
+.l-main3__contact-button {
+  width: 22.5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans JP", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #fff;
+  border: #fff 0.125rem solid;
+  font-size: 1.25rem;
+  border-radius: 3.125rem;
+}
+@media screen and (min-width:768px) {
+  .l-main3__background {
+    height: 31.25rem;
+    background-image: url(../image/price/contact_pc.png);
+  }
+}
+
+/* ----------------------------
+  フッター用
+---------------------------- */
+.l-footer__inner {
+  height: 3.875rem;
+  background-color: #168352;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.l-footer__list {
+  width: 75rem;
+  max-width: 100%;
+  padding-top: 0.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.l-footer__list li:nth-child(2) {
+  padding: 0 0.9375rem;
+}
+.l-footer__list-price,
+.l-footer__list-faq,
+.l-footer__list p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  padding: 0.625rem 0;
+  font-size: 0.8125rem;
+}
+@media screen and (min-width:768px) {
+  .l-footer__inner {
+    height: 5.625rem;
+  }
+  .l-footer__list {
+    align-items: baseline;
+    padding-top: 0.625rem;
+  }
+  .l-footer__list li:nth-child(2) {
+    padding: 0 1.125rem 0 1.25rem;
+  }
+  .l-footer__list-price {
+    font-size: 0.9375rem;
+  }
+  .l-footer__list-faq {
+    font-size: 0.875rem;
+  }
+  .l-footer__list p {
+    font-weight: 300;
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,813 @@
+@charset "UTF-8";
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ● TOP
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* ----------------------------
+  全体共通(TOP0)
+---------------------------- */
+html {
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  color: #000;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  background: none;
+}
+a:hover {
+  opacity: 0.6;
+}
+* {
+  box-sizing:border-box;
+}
+
+/* ----------------------------
+  共通オブジェクト
+---------------------------- */
+.c-br--pc {
+  display: none;
+}
+.c-br--sp {
+  display: initial;
+}
+.c-title {
+  height: 4.6875rem;
+}
+.c-title__inner--top {
+  height: 2.375rem;
+  padding-bottom: 0.125rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.c-title__inner--top h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #168352;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+.c-title__inner--bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-title__inner--bottom h4 {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+}
+@media screen and (min-width:768px) {
+  .c-br--pc {
+    display: initial;
+  }
+  .c-br--sp {
+    display: none;
+  }
+  .c-title {
+    height: 6.875rem;
+  }
+  .c-title__inner--top {
+    height: 3.125rem;
+    padding-bottom: 0.125rem;
+  }
+  .c-title__inner--top h6 {
+    font-size: 1.25rem;
+  }
+  .c-title__inner--bottom {
+    padding-top: 0.3125rem;
+  }
+  .c-title__inner--bottom h4 {
+    font-size: 1.75rem;
+  }
+}
+
+/* ----------------------------
+  ヘッダー用
+---------------------------- */
+.l-header__block {
+  display: flex;
+  justify-content: center;
+}
+.l-header__inner {
+  width: 100%;
+  max-width: 75rem;
+  height: 3.9375rem;
+  padding: 0.375rem 0.9375rem 0rem 0.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.l-header__logo__image img{
+  width: 12.375rem;
+}
+.l-header__nav {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 3.9375rem;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+  padding: 0 0.9375rem;
+}
+.l-header__nav2 {
+  display: none;
+}
+.l-header__nav ul {
+  width: calc(100vw - 1.875rem);
+  height: 13.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #168352;
+  border-radius: 1.5rem;
+}
+.l-header__nav li {
+  text-align: center;
+  padding: 0.9375rem 0;
+}
+.l-header__nav ul a {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #fff;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+}
+.l-header__block .c-nav__active {
+  transform: translateX(0%);
+}
+.l-header__burger {
+  width: 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.l-header__burger-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.l-header__burger--line {
+  position: absolute;
+  top: 28%;
+  left: -5%;
+}
+.l-header__burger--line div {
+  width: 1.5rem;
+  height: 0.1rem;
+  background: #000;
+  margin: 0 0 0.4375rem 0;
+}
+@media screen and (min-width:768px) {
+  .l-header__inner {
+    height: 7.125rem;
+  }
+  .l-header__logo__image img{
+    width: 16.5625rem;
+  }
+  .l-header__burger {
+    display: none;
+  }
+  .l-header__nav {
+    display: none;
+  }
+  .l-header__nav2 {
+    display: block;
+  }
+  .l-header__nav2 ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0.5rem 0;
+  }
+  .l-header__nav2 li:nth-child(1) {
+    padding: 0 1.25rem 0 0;
+  }
+  .l-header__nav2 li:nth-child(2) {
+    padding: 0 0 0 1.25rem;
+  }
+  .l-header__nav2 a {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    font-size: 1rem;
+  } 
+}
+
+/* ----------------------------
+  メイン１用
+---------------------------- */
+.l-main1__block {
+  display: flex;
+  justify-content: center;
+}
+.l-main1__inner {
+  width: 100%;
+  max-width: 75rem;
+  height: 43.125rem;
+  padding: 0 0.9375rem;
+}
+.l-main1__content {
+  height: 12.8125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.l-main1__title {
+  width: 100%;
+  height: 4.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.l-main1__title h3 {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+  font-size: 1.75rem;
+  letter-spacing: 0;
+}
+.l-main1__discription {
+  padding-top: 0.3125rem;
+}
+.l-main1__discription p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #000;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+}
+.l-main1__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width:768px) {
+  .l-main1__inner {
+    height: 46.875rem;
+  }
+  .l-main1__content {
+    height: 11.5625rem;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .l-main1__title {
+    height: 9.375rem;
+    padding: 0 0 0.4375rem 2.0625rem;
+  }
+  .l-main1__title h3 {
+    font-size: 2.5rem;
+  }
+  .l-main1__discription {
+    height: 100%;
+    padding: 0 1.875rem 0.625rem 0.625rem;
+    display: flex;
+    align-items: center;
+  }
+  .l-main1__discription p {
+    font-size: 0.9375rem;
+    letter-spacing: 0;
+    line-height: 1.7;
+  }
+}
+
+/* ----------------------------
+  メイン２用
+---------------------------- */
+.l-main2__block {
+  display: flex;
+  justify-content: center;
+}
+.l-main2__inner {
+  width: 100%;
+  max-width: 66rem;
+}
+.l-main2__background {
+  height: 34.0625rem;
+  margin-top: 0.75rem;
+  padding: 1.875rem 0.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../image/index/AboutUs_sp.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto;
+}
+.l-main2__discription {
+  width: 100%;
+  height: 100%;
+  padding: 1.0625rem 1.5625rem;
+  background-color: rgb(255,255,255,0.8);
+  border-radius: 2.1875rem;
+}
+.l-main2__top p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #000;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+.l-main2__bottom p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #000;
+  padding: 0.625rem 0;
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+@media screen and (max-width:389px) {
+  .l-main2__bottom p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width:768px) {
+  #main2 {
+    padding-top: 1.25rem;
+    padding-bottom: 3.5rem;
+  }
+  .l-main2__contents {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 3.75rem;
+  }
+  .l-main2__background {
+    width: 100%;
+    max-width: 65.5rem;
+    height: 36.875rem;
+    margin-top: 0;
+    padding: 0rem 0.9375rem;
+    justify-content: flex-start;
+    background-image: url(../image/index/AboutUs_pc.png);
+  }
+  .l-main2__discription {
+    width: 70%;
+    padding: 7.1875rem 3.125rem 0 1.75rem;
+  }
+  .l-main2__top p {
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+  .l-main2__bottom p {
+    padding: 1rem 0;
+  }
+}
+@media screen and (min-width:1024px) {
+  .l-main2__discription {
+    width: 50%;
+    padding: 7.1875rem 3.125rem 0 1.75rem;
+  }
+}
+
+/* ----------------------------
+  メイン３用
+---------------------------- */
+.l-main3__block {
+  display: flex;
+  justify-content: center;
+  padding-top: 2.0625rem;
+  padding-bottom: 1.5625rem;
+  background-color: #f3f9f6;
+}
+.l-main3__discription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.9375rem 0px;
+}
+.c-card__features {
+  width: 22rem;
+  background-color: #fff;
+  border-radius: 1.5625rem;
+  margin-bottom: 1.25rem;
+}
+.c-card__f-bottom {
+  height: 5.125rem;
+  padding: 0.3125rem 0.9375rem;
+}
+.c-card__f-bottom p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  line-height: 1.7;
+}
+@media screen and (min-width:768px) {
+  .l-main3__block {
+    padding-top: 2.375rem;
+    padding-bottom: 4rem;
+  }
+  .l-main3__inner {
+    width: 100%;
+    max-width: 75rem;
+  }
+  .l-main3__discription {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0.625rem 0.3rem 0 0.3rem;
+  }
+  .c-card__features {
+    width: 23.125rem;
+    padding: 0 0 0.3125rem 0;
+    margin: 0 0.9375rem;
+  }
+  .c-card__f-top img {
+    width: 100%;
+  }
+  .c-card__f-bottom {
+    padding: 0.3rem 1.25rem 1rem 1.25rem;
+  }
+  .c-card__f-bottom p {
+    font-size: 1.1875rem;
+  }
+}
+
+/* ----------------------------
+  メイン４用
+---------------------------- */
+#main4 {
+  padding-top: 2.3625rem;
+}
+.l-main4__discription {
+  width: 100%;
+  max-width: 70.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0.9375rem;
+}
+.c-card__products {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.25rem 0 1.25rem 1.5625rem;
+  margin-bottom: 1.25rem;
+  border-radius: 1.5625rem;
+  background-color: #168352;
+}
+.c-card__p-top {
+  width: 6.25rem;
+  height: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-card__p-top img {
+  width: 100%;
+}
+.c-card__p-bottom {
+  padding: 0 0.9375rem;
+}
+.c-card__p-bottom p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #fff;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  line-height: 1.7;
+}
+@media screen and (min-width:768px) {
+  #main4 {
+    padding-bottom: 1.85rem;
+  }
+  .l-main4__contents {
+    display: flex;
+    justify-content: center;
+  }
+  .l-main4__discription {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .c-card__products {
+    margin: 0.3125rem;
+  }
+}
+@media screen and (min-width:1100px) {
+  .l-main4__discription {
+    justify-content: space-between;
+    padding: 0.3125rem 0.7rem;
+  }
+  .l-main4__card1,
+  .l-main4__card2 {
+    width: 32.8125rem;
+    padding: 1.5625rem 0 1.5625rem 1.875rem;
+    margin-bottom: 2.5rem;
+  }
+  .l-main4__card1 .c-card__p-bottom,
+  .l-main4__card2 .c-card__p-bottom {
+    width: 16.25rem;
+    padding-left: 1.875rem;
+  }
+  .l-main4__card1 .c-card__p-top,
+  .l-main4__card2 .c-card__p-top {
+    width: 8.3125rem;
+    height: 8.125rem;
+  }
+  .l-main4__card1 .c-card__p-bottom p,
+  .l-main4__card2 .c-card__p-bottom p {
+    font-size: 1.5rem;
+  }
+  .l-main4__card3,
+  .l-main4__card4,
+  .l-main4__card5 {
+    width: 20.8125rem;
+  }
+  .l-main4__card3 .c-card__p-top,
+  .l-main4__card4 .c-card__p-top,
+  .l-main4__card5 .c-card__p-top {
+    width: 7.0625rem;
+    height: 6.875rem;
+  }
+  .l-main4__card3 .c-card__p-bottom,
+  .l-main4__card4 .c-card__p-bottom,
+  .l-main4__card5 .c-card__p-bottom {
+    width: 12.5rem;
+    padding: 0 1.875rem 0 1.25rem;
+  }
+  .l-main4__card3 .c-card__p-bottom p,
+  .l-main4__card4 .c-card__p-bottom p,
+  .l-main4__card5 .c-card__p-bottom p {
+    font-size: 1.25rem;
+  }
+}
+/* ----------------------------
+  メイン５用
+---------------------------- */
+#main5 {
+  padding-top: 1.25rem;
+}
+.l-main5__block {
+  display: flex;
+  justify-content: center;
+  padding-top: 2.0625rem;
+  padding-bottom: 0.3125rem;
+  background-color: #f3f9f6;
+}
+.l-main5__discription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.9375rem;
+}
+.c-card__case {
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.625rem;
+}
+.c-card__c-bottom {
+  padding: 0;
+}
+.c-card__c-bottom p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #168352;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  line-height: 1.7;
+}
+@media screen and (min-width:768px) {
+  #main5 {
+    padding-top: 1.5625rem;
+  }
+  .l-main5__block {
+    padding-bottom: 3.1rem;
+  }
+  .l-main5__inner {
+    width: 100%;
+    max-width: 75rem;
+  }
+  .l-main5__discription {
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0.8rem 0.2rem 0 0.2rem;
+  }
+  .c-card__case {
+    width: 24rem;
+    margin: 0 0.9375rem;
+  }
+  .c-card__c-top img {
+    width: 100%;
+  }
+  .c-card__c-bottom {
+    padding-top: 0.125rem;
+  }
+  .c-card__c-bottom p {
+    font-size: 1.1875rem;
+  }
+}
+
+/* ----------------------------
+  メイン６用
+---------------------------- */
+#main6 {
+  padding-top: 2.1875rem;
+  padding-bottom: 2.3125rem;
+}
+.l-main6__block {
+  display: flex;
+  justify-content: center;
+}
+.l-main6__inner {
+  padding: 0 0.9375rem;
+}
+.l-main6__list {
+  margin-top: 0.75rem;
+}
+.l-main6__list--item a {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 0.0625rem solid #ddd;
+}
+.l-main6__list--item:first-child a{
+  border-top: 0.0625rem solid #ddd;
+}
+.l-main6__list--date {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222;
+  font-size: 0.9375rem;
+  padding: 1.125rem 1.125rem 0 0;
+}
+.l-main6__list--category {
+  display: flex;
+  align-items: center;
+  padding: 1.125rem 0 0 0;
+}
+.l-main6__list--category span {
+  width: 8.3125rem;
+  background: #473221;
+  text-align: center;
+  border-radius: 0.3125rem;
+  font-family: "Noto Sans JP", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  padding: 0.25rem 0 0.3125rem 0;
+  font-size: 0.8125rem;
+}
+.l-main6__list--title {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #09947b;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  padding: 0.625rem 0 0.6875rem 0.125rem;
+}
+.l-main6__button {
+  display: flex;
+  justify-content: center;
+  padding: 1.5625rem 0;
+}
+.l-main6__news-button {
+  width: 18.75rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans JP", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #fff;
+  font-size: 1.125rem;
+  background-color: #128a74;
+  box-shadow: 0 0.375rem 0 #066655;
+  border-radius: 3.125rem;
+}
+@media screen and (min-width:640px) {
+  .l-main6__list--title {
+    min-width: 24.375rem;
+  }
+}
+@media screen and (min-width:768px) {
+  #main6 {
+    padding-top: 2.2rem;
+    padding-bottom: 2.1875rem;
+  }
+  .l-main6__inner {
+    padding: 0;
+  }
+  .l-main6__list {
+    width: 56.25rem;
+    margin-top: 0.625rem;
+  }
+  .l-main6__list--item a {
+    flex-wrap: nowrap;
+  }
+  .l-main6__list--date {
+    font-size: 0.875rem;
+    padding: 1.25rem 1.25rem 0.8125rem 0;
+  }
+  .l-main6__list--category {
+    padding: 1.125rem 0 0.9375rem 0;
+  }
+  .l-main6__list--category span {
+    width: 8.3125rem;
+    padding: 0.1875rem 0 0.3125rem 0;
+    font-size: 0.8125rem;
+  }
+  .l-main6__list--title {
+    font-size: 0.9375rem;
+    padding: 1.25rem 0 0.8125rem 1.5rem;
+  }
+  .l-main6__button {
+    padding: 2.1875rem 0;
+  }  
+}
+
+/* ----------------------------
+  フッター用
+---------------------------- */
+.l-footer__inner {
+  height: 3.875rem;
+  background-color: #168352;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.l-footer__list {
+  width: 100%;
+  max-width: 75rem;
+  padding-top: 0.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.l-footer__list li:nth-child(2) {
+  padding: 0 0.9375rem;
+}
+.l-footer__list-price,
+.l-footer__list-faq,
+.l-footer__list p {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  padding: 0.625rem 0;
+  font-size: 0.8125rem;
+}
+@media screen and (min-width:768px) {
+  .l-footer__inner {
+    height: 5.625rem;
+  }
+  .l-footer__list {
+    align-items: baseline;
+    padding-top: 0;
+  }
+  .l-footer__list li:nth-child(2) {
+    padding: 0 1.125rem 0 1.25rem;
+  }
+  .l-footer__list-price {
+    font-size: 0.9375rem;
+  }
+  .l-footer__list-faq {
+    font-size: 0.875rem;
+  }
+  .l-footer__list p {
+    font-weight: 300;
+    font-size: 1.25rem;
+  }
+}
