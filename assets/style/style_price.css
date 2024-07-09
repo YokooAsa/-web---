@@ -38,7 +38,7 @@ a:hover {
   border-bottom: #ddd 0.1875rem solid;
   position:relative;
 }
-.l-main2__title h4::after{
+.l-main2__title h2::after{
   content:"";
   display:block;
   width: 3.125rem;
@@ -47,9 +47,9 @@ a:hover {
   position:absolute;
   bottom: -0.1875rem;
 }
-.l-main2__title h4 {
+.l-main2__title h2 {
   font-family: "Noto Sans JP", serif;
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
   color: #000;
   font-size: 1.375rem;
@@ -60,6 +60,9 @@ a:hover {
   justify-content: center;
   flex-direction: column;
   padding: 1.375rem 0 0.625rem 0;
+}
+.c-card__discription {
+  padding-top: 7px;
 }
 .c-card__discription p {
   font-family: "Noto Sans JP", serif;
@@ -76,12 +79,12 @@ a:hover {
   .l-main2__title {
     border-bottom: #ddd 0.3125rem solid;
   }
-  .l-main2__title h4::after{
+  .l-main2__title h2::after {
     width: 6.25rem;
     height: 0.3125rem;
     bottom: -0.3125rem;
   }
-  .l-main2__title h4 {
+  .l-main2__title h2 {
     font-weight: 700;
     font-size: 1.75rem;
     padding: 1.25rem 0 1.125rem 0;
@@ -94,9 +97,13 @@ a:hover {
   .c-card__image {
     height: 9.25rem;
     margin-bottom: 0.625rem;
+    padding: 0 2px;
   }
-  .c-card__image img{
+  .c-card__image img {
     height: 100%;
+  }
+  .c-card__discription {
+    padding-top: 2px;
   }
   .c-card__discription p {
     line-height: 1.7;
@@ -125,12 +132,13 @@ a:hover {
 .l-header__nav {
   display: flex;
   justify-content: center;
-  position: absolute;
   top: 3.9375rem;
   right: 0;
   transform: translateX(100%);
   transition: all 0.5s ease-in-out;
   padding: 0 0.9375rem;
+  position: fixed;
+  overflow-x: hidden;
 }
 .l-header__nav2 {
   display: none;
@@ -248,7 +256,7 @@ a:hover {
   background-color: #fff;
   padding: 0.9375rem 0;
 }
-.l-main1__main-title h3 {
+.l-main1__main-title h1 {
   font-family: "Noto Sans JP", serif;
   font-weight: 700;
   font-style: normal;
@@ -277,7 +285,7 @@ a:hover {
     padding: 1.875rem 0 2.1875rem 0;
     margin-top: -7.5rem;
   }
-  .l-main1__main-title h3 {
+  .l-main1__main-title h1 {
     font-size: 2.25rem;
   }
   .l-main1__nav {
@@ -302,7 +310,7 @@ a:hover {
   flex-direction: column;
 }
 .l-main2__slick-inner {
-  padding: 1.375rem 0;
+  padding: 1.375rem 0 1.52rem 0;
 }
 .l-main2__slick img{
   width: 100%;
@@ -338,7 +346,7 @@ a:hover {
   margin-bottom: 2.0625rem;
 }
 .l-main2__yen {
-  padding: 1.0625rem 0 1.25rem 0;
+  padding: 0.9rem 0 1.25rem 0;
 }
 .l-main2__yen span {
   font-family: "Montserrat", sans-serif;
@@ -359,7 +367,7 @@ a:hover {
   padding-left: 1.0625rem;
   margin: 1.375rem 0 1.25rem 0;
 }
-.l-main2__subtitle h5 {
+.l-main2__subtitle h3 {
   font-family: "Noto Sans JP", serif;
   font-weight: 700;
   font-style: normal;
@@ -433,7 +441,7 @@ a:hover {
     margin: 1.9375rem 0 1.5625rem 0;
     padding: 0.0625rem 0 0.25rem 1.0625rem;
   }
-  .l-main2__subtitle h5 {
+  .l-main2__subtitle h3 {
     font-size: 1.5rem;
   }
   .l-main2__table th,
@@ -485,7 +493,7 @@ a:hover {
 }
 @media screen and (min-width:768px) {
   .l-main3__background {
-    height: 31.25rem;
+    height: 28rem;
     background-image: url(../image/price/contact_pc.png);
   }
 }

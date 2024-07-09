@@ -50,7 +50,7 @@ a:hover {
   align-items: flex-end;
   justify-content: center;
 }
-.c-title__inner--top h6 {
+.c-title__inner--top h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -63,7 +63,7 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
-.c-title__inner--bottom h4 {
+.c-title__inner--bottom h2 {
   font-family: "Noto Sans JP", serif;
   font-weight: 700;
   font-style: normal;
@@ -85,13 +85,13 @@ a:hover {
     height: 3.125rem;
     padding-bottom: 0.125rem;
   }
-  .c-title__inner--top h6 {
+  .c-title__inner--top h3 {
     font-size: 1.25rem;
   }
   .c-title__inner--bottom {
     padding-top: 0.3125rem;
   }
-  .c-title__inner--bottom h4 {
+  .c-title__inner--bottom h2 {
     font-size: 1.75rem;
   }
 }
@@ -118,12 +118,13 @@ a:hover {
 .l-header__nav {
   display: flex;
   justify-content: center;
-  position: absolute;
   top: 3.9375rem;
   right: 0;
   transform: translateX(100%);
   transition: all 0.5s ease-in-out;
   padding: 0 0.9375rem;
+  position: fixed;
+  overflow-x: hidden;
 }
 .l-header__nav2 {
   display: none;
@@ -242,7 +243,7 @@ a:hover {
   align-items: center;
   justify-content: flex-start;
 }
-.l-main1__title h3 {
+.l-main1__title h1 {
   font-family: "Noto Sans JP", serif;
   font-weight: 700;
   font-style: normal;
@@ -281,7 +282,7 @@ a:hover {
     height: 9.375rem;
     padding: 0 0 0.4375rem 2.0625rem;
   }
-  .l-main1__title h3 {
+  .l-main1__title h1 {
     font-size: 2.5rem;
   }
   .l-main1__discription {
@@ -317,11 +318,11 @@ a:hover {
   justify-content: center;
   background-image: url(../image/index/AboutUs_sp.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
   background-size: auto;
 }
 .l-main2__discription {
-  width: 100%;
+  width: 22.5rem;
   height: 100%;
   padding: 1.0625rem 1.5625rem;
   background-color: rgb(255,255,255,0.8);
@@ -351,14 +352,52 @@ a:hover {
 }
 @media screen and (min-width:768px) {
   #main2 {
+    margin-top: -6.25rem;
+    margin-bottom: 3rem;;
+  }
+  .l-main2__top p {
+    font-weight: 700;
+    font-size: 1.0rem;
+  }
+}
+@media screen and (min-width:1024px) {
+  #main2 {
+    margin-top: -1.25rem;
+  }
+}
+@media screen and (min-width:1200px) {
+  #main2 {
     padding-top: 1.25rem;
     padding-bottom: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .l-main2__background {
+    width: 100%;
+    max-width: 65.5rem;
+    height: 36.875rem;
+    margin-top: 0;
+    padding: 0rem 0.9375rem;
+    justify-content: flex-start;
+    background-position: right;
+    background-image: url(../image/index/AboutUs_pc.png);
   }
   .l-main2__contents {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     padding-right: 3.75rem;
+  }
+  .l-main2__discription {
+    width: 50%;
+    padding: 7.1875rem 3.125rem 0 1.75rem;
+  }
+  .l-main2__top p {
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+  .l-main2__bottom p {
+    padding: 1.625rem 0;
   }
   .l-main2__background {
     width: 100%;
@@ -368,23 +407,6 @@ a:hover {
     padding: 0rem 0.9375rem;
     justify-content: flex-start;
     background-image: url(../image/index/AboutUs_pc.png);
-  }
-  .l-main2__discription {
-    width: 70%;
-    padding: 7.1875rem 3.125rem 0 1.75rem;
-  }
-  .l-main2__top p {
-    font-weight: 700;
-    font-size: 1.25rem;
-  }
-  .l-main2__bottom p {
-    padding: 1rem 0;
-  }
-}
-@media screen and (min-width:1024px) {
-  .l-main2__discription {
-    width: 50%;
-    padding: 7.1875rem 3.125rem 0 1.75rem;
   }
 }
 
@@ -403,7 +425,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0.9375rem 0px;
+  padding: 0.9375rem 0;
 }
 .c-card__features {
   width: 22rem;
@@ -533,7 +555,7 @@ a:hover {
   }
   .l-main4__card1 .c-card__p-bottom,
   .l-main4__card2 .c-card__p-bottom {
-    width: 16.25rem;
+    width: 18.25rem;
     padding-left: 1.875rem;
   }
   .l-main4__card1 .c-card__p-top,
