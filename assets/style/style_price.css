@@ -352,7 +352,8 @@ a:hover {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #000;
+  /* color: #000; */
+  color: #168352; /*20240712 既存サイト修正分*/
   font-size: 2rem;
 }
 .l-main2__yen p {
